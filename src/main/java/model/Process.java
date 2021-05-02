@@ -21,7 +21,7 @@ public class Process {
 
     public Process(ProcessUser creator, Status status, String type, int processTime,
                    int priority) {
-        this.pid = UUID.randomUUID().toString();
+        this.pid = Long.toString(Math.round(Math.random() * 3000 + 1000));
         this.creator = creator;
         this.status = status;
         this.type = type;
